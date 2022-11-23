@@ -1,0 +1,418 @@
+@import '_variables.scss';
+
+
+@mixin textos{ 
+    font-family: $fontfamily;
+    font-size: small; 
+}
+
+@mixin cienporcien{
+    width:100%;
+    height:100%;
+}
+
+@mixin centro{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+
+}
+
+textarea {
+    @include textos;
+}
+input[type=text] {
+    @include textos;
+}
+
+header{
+   
+}
+
+#lista{
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+    line-height: 40px;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    animation: {
+        name: example;
+        duration: 4s;
+        iteration-count: infinite;
+    };
+    
+}
+li:hover{
+    background-color: gray;
+}
+
+
+@keyframes example {
+    from {background-color: white;}
+    to {background-color: red;}
+}
+
+
+.contenedorimagen{
+    width: 100%;
+  
+}
+
+.imagenback{
+    max-width: 100%;
+    height: 100vh;
+    margin-top: 20px;
+    width: 100%;
+    
+}
+
+.menu{
+    width: 100%;
+}
+
+.titulo1{
+    font-size: 40px;
+    text-align: center;
+    color: $blanco;
+}
+.titulo2{
+    font-size: 30px;
+    margin-left: 40px;
+    width: 269px;
+    text-align: center;
+    color: $blanco;
+}
+.contenedor-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-link{
+    text-decoration: none;
+    color: black;
+}
+.Redes{
+    @include flex;
+    font-size: 50px;
+    margin-top: 10px;
+}
+.Redes a{
+    color: $blanco;
+}
+.bcolor h1,h2{
+   color: $blanco;
+}
+.linea-formulario{
+    width: 80%;
+    @include flex;
+    @include centro;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.linea-formulario input{
+    border-radius: 30px;
+    width: 45%;
+    border: $border;
+    padding: 20px;
+    background-color: $blanco;
+}
+.linea-formulario textarea{
+    border-radius: 30px;
+    width: 95%;
+    border: $border;
+    padding: 20px;
+}
+h1, h2{
+    text-align: center;
+    
+}
+.Productos h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    display: flex;
+}
+.sucursales{
+    font-family: "Roboto", Sans-serif;
+    width: 95%;
+    @include centro;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    
+}
+
+.contenedor-sucursal{
+    width: 47%;
+    height: 690px;
+    margin-left: 5px;
+   
+}
+
+.caja-sucursal{
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+.caja-sucursal-iz{
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+}
+h1{
+ 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h5{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.caja-sucursal-der{
+    width: 30%;
+    height: 100%;
+}
+
+.caja-sucursal-arriba{
+    width: 100%;
+    height: 213px;
+    text-align: center;
+    padding: 10px;
+}
+.caja-sucursal-abajo{
+    width: 100%;
+    height: 488px;
+}
+.caja-sucursal-abajo img{
+    @include cienporcien;
+}
+
+.caja-sucursal-der img{
+    @include cienporcien;
+}
+
+.caja-color-1{
+    background-color: rgb(86, 176, 64);
+}
+.caja-color-2{
+    background-color: rgb(147, 119, 220);
+}
+.caja-color-3{
+    background-color: rgb(202, 132, 132);
+}
+
+.caja-color-4{
+    background-color: rgb(214, 139, 19);
+}
+
+.mainproductos{
+    font-family: "Roboto", Sans-serif;
+    width: 95%;
+    @include centro;
+    @include flex;
+    flex-direction: row;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.contenedor-producto{
+    width: 380px;
+    height: 600px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    
+}
+
+.back-img1{
+    background: {
+        image: url('../img/Pollo\ Entero.JPG');
+        size: cover;
+        position: center;
+    };    
+}
+
+.back-img1:hover, .back-img2:hover ,.back-img3:hover{
+    backface-visibility: hidden;
+    transform: scale(1.15, 1.15);
+    opacity: 0.5;
+}
+
+.back-img2{
+    background: {
+        image: url('../img/Ojo\ de\ Bife\ Entero.JPG');
+        size: cover;
+        position: center;
+    }
+}
+
+.back-img3{
+    background: {
+        image: url('../img/Churrascos\ de\ Cerdo.JPG');
+        size: cover;
+        position: center;
+    }
+}
+
+   
+
+.ImgSN{
+    opacity: 0.3;
+    margin: 10px;
+    float: left;
+    margin-top: 40px;
+    
+}
+.contenedor-producto p {
+    margin-top: 15px;
+    font-size:  45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.Txt{
+    color: $blanco;
+    padding: 50px;
+    font-size: 30px;
+    text-align: justify;
+    position: relative;
+}
+.Txt:after {
+    content:'';
+    background: url('https://cdn.shopify.com/s/files/1/0273/6858/7335/files/IMG_3555_copia_161b98ca-c416-4087-b9a2-406e414a0d73.jpg?v=1592588056');
+    position: absolute;
+    top:0px;
+    left: 0px;
+    @include cienporcien;
+    z-index:-1;
+    opacity: 0.6; /* Here is your opacity */
+}
+
+
+.TxtNosotros{
+    color: $blanco;
+    text-align: center;
+    font-size: 30px;
+    
+}
+.ImgReparto{
+    width: 48%;
+}
+.ImgReparto img{
+    width: 100%;
+
+}
+.TextoReparto{
+    width: 48%;
+    padding: 20px;
+    color: $blanco;
+}
+.Reparto{
+    @include cienporcien;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    
+}
+
+@media only screen and (max-width: 400px) {
+    
+    .contenedor-sucursal{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .sucursales{
+        flex-direction: column;
+    }
+    .titulo1{
+        @include centro;
+    }
+    .titulo2{
+        @include centro;
+    }
+    .Logo{
+        @include centro;
+    }
+    .imagenback{
+        height: 50vh;
+    }
+    .Redes{
+        font-size: 30px;
+    }
+    li{
+        font-size: 13px;    
+    }
+    .Txt{
+        font-size: 16px;
+        padding: 10px;
+
+    }
+}
+
+    
+@media only screen and (max-width: 641px) {
+    
+    .contenedor-sucursal{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .sucursales{
+        flex-direction: column;
+    }
+    .titulo1{
+        width: 100%;
+        
+    }
+    .titulo2{
+        width: 100%;
+    }
+    .Logo{
+        @include centro;
+    }
+    .imagenback{
+        height: 50vh;
+    }
+    .Redes{
+        font-size: 30px;
+    }
+    li{
+        font-size: 13px;    
+    }
+    .Txt{
+        font-size: 16px;
+        padding: 10px;
+
+    }
+    .ImgReparto{
+        width: 100%;
+    }
+    .TextoReparto{
+        width: 100%;        
+    }
+}
+
+ 
